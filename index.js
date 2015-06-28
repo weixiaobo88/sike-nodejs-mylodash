@@ -36,4 +36,10 @@ _.memoize = function(fn, cb) {
   };
 }
 
+_.bind = function(fn, context){
+  return function() {
+    return fn.call(context);
+  }
+}
+
 module.exports = _;
